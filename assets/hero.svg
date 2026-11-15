@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 320" width="800" height="320" role="img" aria-labelledby="hero-t hero-d">
+  <title id="hero-t">Sparsh Jain — engineering lab banner</title>
+  <desc id="hero-d">A dark terminal window reading: whoami, SPARSH JAIN, "Understand it. Take it apart. Build it better." with a stylised microchip and circuit traces on the right.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e151e"/>
+      <stop offset="1" stop-color="#080b10"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#e6edf3"/>
+      <stop offset="1" stop-color="#3ee6ff"/>
+    </linearGradient>
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ee6ff" stop-opacity="0.9"/>
+      <stop offset="0.6" stop-color="#3ee6ff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#3ee6ff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#1a2431"/>
+    </pattern>
+    <clipPath id="card"><rect width="800" height="320" rx="14"/></clipPath>
+    <clipPath id="typed"><rect class="typeclip" x="40" y="160" width="640" height="40"/></clipPath>
+    <style>
+      .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .muted { fill: #7d8b99; }
+      .soft { fill: #c9d4df; }
+      .cy { fill: #3ee6ff; }
+      .fade1 { animation: fade .6s ease-out .1s backwards; }
+      .fade2 { animation: fade .6s ease-out .35s backwards; }
+      .fade3 { animation: fade .6s ease-out 2.4s backwards; }
+      .typeclip { animation: type 1.9s steps(46) .7s backwards; }
+      .cursor { animation: blink 1.1s steps(2, start) 2.8s infinite backwards; }
+      .live { animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes fade { from { opacity: 0; } }
+      @keyframes type { from { width: 0; } }
+      @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0; } }
+      @keyframes pulse { 50% { opacity: .35; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="800" height="320" fill="url(#bg)"/>
+    <rect width="800" height="320" fill="url(#dots)"/>
+
+    <!-- window bar -->
+    <rect width="800" height="40" fill="#0f1620"/>
+    <rect y="39" width="800" height="1.5" fill="url(#rule)"/>
+    <circle cx="24" cy="20" r="5" fill="#ff5f56" fill-opacity="0.75"/>
+    <circle cx="44" cy="20" r="5" fill="#ffbd2e" fill-opacity="0.75"/>
+    <circle cx="64" cy="20" r="5" fill="#27c93f" fill-opacity="0.75"/>
+    <text class="m muted" x="400" y="24" font-size="12" text-anchor="middle">sparsh@lab: ~</text>
+    <g class="m" font-size="12">
+      <circle class="live" cx="712" cy="20" r="3.5" fill="#9dff7a"/>
+      <text x="722" y="24" fill="#7d8b99">online</text>
+    </g>
+
+    <!-- terminal content -->
+    <g class="fade1">
+      <text class="m" x="40" y="88" font-size="15"><tspan class="cy">$</tspan><tspan class="muted" dx="9">whoami</tspan></text>
+    </g>
+    <g class="fade2">
+      <text class="m" x="40" y="150" font-size="58" font-weight="700" fill="url(#name)" letter-spacing="1">SPARSH JAIN</text>
+    </g>
+
+    <g clip-path="url(#typed)">
+      <text class="m soft" x="40" y="186" font-size="22">Understand it. Take it apart. Build it better.</text>
+    </g>
+
+    <g class="fade3">
+      <text class="m muted" x="40" y="224" font-size="14">btech-cse  ·  software  ·  security  ·  local ai  ·  networking  ·  electronics</text>
+    </g>
+    <text class="m" x="40" y="272" font-size="15"><tspan class="cy">~/lab $</tspan></text>
+    <rect class="cursor" x="112" y="259" width="9" height="17" fill="#3ee6ff"/>
+
+    <!-- microchip -->
+    <g stroke="#3ee6ff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="640" y="70" width="100" height="70" rx="6" fill="#0b1118" stroke-opacity="0.85"/>
+      <rect x="652" y="82" width="76" height="46" rx="3" stroke-opacity="0.25"/>
+      <!-- pins -->
+      <g stroke-opacity="0.6">
+        <path d="M656 70v-10M676 70v-10M696 70v-10M716 70v-10"/>
+        <path d="M656 140v10M676 140v10M696 140v10M716 140v10"/>
+        <path d="M640 88h-10M640 105h-10M640 122h-10"/>
+        <path d="M740 88h10M740 105h10M740 122h10"/>
+      </g>
+      <!-- traces -->
+      <g stroke-opacity="0.28">
+        <path d="M630 88H590l-14 -14H520"/>
+        <path d="M630 105H560"/>
+        <path d="M630 122H590l14 14"/>
+        <path d="M750 88h20l10 -10v-22"/>
+        <path d="M750 122h20l10 10v30"/>
+        <path d="M716 60v-8h-30"/>
+      </g>
+    </g>
+    <text class="m cy" x="690" y="111" font-size="22" font-weight="700" text-anchor="middle" fill-opacity="0.9">SJ</text>
+    <g fill="#3ee6ff" fill-opacity="0.55">
+      <circle cx="520" cy="74" r="2.5"/>
+      <circle cx="560" cy="105" r="2.5"/>
+      <circle cx="604" cy="136" r="2.5"/>
+      <circle cx="780" cy="56" r="2.5"/>
+      <circle cx="780" cy="162" r="2.5"/>
+      <circle cx="686" cy="52" r="2.5"/>
+    </g>
+
+    <!-- bottom trace with travelling signal -->
+    <path id="sig" d="M470 298H640l20 -20H792" stroke="#3ee6ff" stroke-opacity="0.22" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+    <circle r="3" fill="#9dff7a">
+      <animateMotion dur="5s" repeatCount="indefinite" begin="3s"><mpath href="#sig"/></animateMotion>
+    </circle>
+  </g>
+  <rect x="0.75" y="0.75" width="798.5" height="318.5" rx="13.5" fill="none" stroke="#1f2a37" stroke-width="1.5"/>
+</svg>

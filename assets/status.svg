@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120" role="img" aria-labelledby="st-t st-d">
+  <title id="st-t">Status dashboard</title>
+  <desc id="st-d">Four status panels. Stack in use: Python and TypeScript, FastAPI and React. Building: security tooling, permission auditing. Exploring: local AI and OpenWrt, Arduino and logic. Mode: BTech CSE student, curious by default.</desc>
+  <defs>
+    <style>
+      .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .cell { fill: #0f1620; stroke: #1f2a37; stroke-width: 1.5; }
+      .lab { font-size: 10px; fill: #7d8b99; letter-spacing: 1.5px; }
+      .v1 { font-size: 13px; fill: #e6edf3; font-weight: 700; }
+      .v2 { font-size: 12px; fill: #7d8b99; }
+      .live { animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes pulse { 50% { opacity: .35; } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+    </style>
+  </defs>
+  <g class="m">
+    <rect class="cell" x="0.75" y="0.75" width="188.5" height="118.5" rx="10"/>
+    <rect x="0.75" y="20" width="3" height="28" rx="1.5" fill="#3ee6ff"/>
+    <text class="lab" x="18" y="34">STACK IN USE</text>
+    <text class="v1" x="18" y="66">Python · TypeScript</text>
+    <text class="v2" x="18" y="90">FastAPI · React</text>
+
+    <rect class="cell" x="203.75" y="0.75" width="188.5" height="118.5" rx="10"/>
+    <rect x="203.75" y="20" width="3" height="28" rx="1.5" fill="#3ee6ff"/>
+    <text class="lab" x="221" y="34">BUILDING</text>
+    <text class="v1" x="221" y="66">Security tooling</text>
+    <text class="v2" x="221" y="90">Permission auditing</text>
+
+    <rect class="cell" x="407.75" y="0.75" width="188.5" height="118.5" rx="10"/>
+    <rect x="407.75" y="20" width="3" height="28" rx="1.5" fill="#3ee6ff"/>
+    <text class="lab" x="425" y="34">EXPLORING</text>
+    <text class="v1" x="425" y="66">Local AI · OpenWrt</text>
+    <text class="v2" x="425" y="90">Arduino · logic</text>
+
+    <rect class="cell" x="610.75" y="0.75" width="188.5" height="118.5" rx="10"/>
+    <rect x="610.75" y="20" width="3" height="28" rx="1.5" fill="#9dff7a"/>
+    <circle class="live" cx="785" cy="30" r="3.5" fill="#9dff7a"/>
+    <text class="lab" x="628" y="34">MODE</text>
+    <text class="v1" x="628" y="66">BTech CSE student</text>
+    <text class="v2" x="628" y="90">Curious by default</text>
+  </g>
+</svg>
