@@ -1,40 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 28" width="800" height="28" role="img" aria-label="Animated waveform divider">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 24" width="800" height="24" role="img" aria-label="Cyber laser divider">
   <defs>
-    <linearGradient id="wg1" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="div-laser" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#3ee6ff" stop-opacity="0"/>
-      <stop offset="15%" stop-color="#3ee6ff" stop-opacity=".3"/>
-      <stop offset="35%" stop-color="#00f5a0" stop-opacity=".7"/>
-      <stop offset="50%" stop-color="#3ee6ff" stop-opacity=".9"/>
-      <stop offset="65%" stop-color="#a855f7" stop-opacity=".7"/>
-      <stop offset="85%" stop-color="#3ee6ff" stop-opacity=".3"/>
+      <stop offset="20%" stop-color="#3ee6ff" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#00f5a0" stop-opacity="0.85"/>
+      <stop offset="80%" stop-color="#3ee6ff" stop-opacity="0.3"/>
       <stop offset="100%" stop-color="#3ee6ff" stop-opacity="0"/>
     </linearGradient>
-    <linearGradient id="wg2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f5a0" stop-opacity="0"/>
-      <stop offset="50%" stop-color="#00f5a0" stop-opacity=".5"/>
-      <stop offset="100%" stop-color="#00f5a0" stop-opacity="0"/>
-    </linearGradient>
+
     <style>
-      .wave{animation:waveMove 3s ease-in-out infinite alternate}
-      .dp{animation:dotPulse 2.5s ease-in-out infinite}
-      @keyframes waveMove{0%{d:path("M0 14 Q100 6,200 14 T400 14 T600 14 T800 14")}100%{d:path("M0 14 Q100 22,200 14 T400 14 T600 14 T800 14")}}
-      @keyframes dotPulse{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.5);filter:drop-shadow(0 0 4px #00f5a0)}}
-      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+      .laser-pulse { animation: pulseLaser 2.8s ease-in-out infinite; }
+      @keyframes pulseLaser { 0%, 100% { opacity: 0.45; } 50% { opacity: 1; filter: drop-shadow(0 0 4px #00f5a0); } }
+      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
     </style>
   </defs>
-  <!-- Main waveform line -->
-  <path class="wave" d="M0 14 Q100 6,200 14 T400 14 T600 14 T800 14" stroke="url(#wg1)" stroke-width="1.5" fill="none"/>
-  <!-- Secondary subtle line -->
-  <path d="M0 14 Q200 10,400 14 T800 14" stroke="url(#wg2)" stroke-width=".8" fill="none" opacity=".4"/>
-  <!-- Center diamond -->
+
+  <!-- Laser Beam -->
+  <line x1="0" y1="12" x2="800" y2="12" stroke="url(#div-laser)" stroke-width="1.5"/>
+
+  <!-- Center Diamond & Satellite Nodes -->
   <g fill="#00f5a0">
-    <rect class="dp" x="394" y="8" width="12" height="12" rx="2" transform="rotate(45 400 14)"/>
+    <rect class="laser-pulse" x="394" y="6" width="12" height="12" rx="2" transform="rotate(45 400 12)"/>
+    <circle cx="355" cy="12" r="2.5" fill="#3ee6ff" fill-opacity="0.7"/>
+    <circle cx="445" cy="12" r="2.5" fill="#3ee6ff" fill-opacity="0.7"/>
+    <circle cx="310" cy="12" r="1.8" fill="#a855f7" fill-opacity="0.5"/>
+    <circle cx="490" cy="12" r="1.8" fill="#a855f7" fill-opacity="0.5"/>
+    <circle cx="260" cy="12" r="1.2" fill="#3ee6ff" fill-opacity="0.3"/>
+    <circle cx="540" cy="12" r="1.2" fill="#3ee6ff" fill-opacity="0.3"/>
   </g>
-  <!-- Satellite dots -->
-  <circle cx="340" cy="14" r="2.5" fill="#3ee6ff" fill-opacity=".6"/>
-  <circle cx="460" cy="14" r="2.5" fill="#3ee6ff" fill-opacity=".6"/>
-  <circle cx="290" cy="14" r="1.8" fill="#a855f7" fill-opacity=".4"/>
-  <circle cx="510" cy="14" r="1.8" fill="#a855f7" fill-opacity=".4"/>
-  <circle cx="240" cy="14" r="1.2" fill="#3ee6ff" fill-opacity=".2"/>
-  <circle cx="560" cy="14" r="1.2" fill="#3ee6ff" fill-opacity=".2"/>
 </svg>
