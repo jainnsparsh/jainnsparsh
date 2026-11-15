@@ -1,5 +1,6 @@
 <div align="center">
 
+<<<<<<< HEAD
 <!-- Hero Banner -->
 <img src="assets/hero.svg" alt="Sparsh Jain — Systems &amp; Security Engineering Laboratory Banner" width="100%">
 
@@ -23,22 +24,33 @@
   <code><a href="#06--github-analytics">06 // METRICS</a></code> &nbsp;·&nbsp;
   <code><a href="#07--direct-transmission">07 // CONNECT</a></code>
 </p>
+=======
+<img src="assets/hero.svg" alt="Sparsh Jain. Understand it. Learn it. Build it better." width="100%">
+>>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 
 </div>
 
 <br>
 
+<<<<<<< HEAD
 > **"If a system works, I want to know why. If it's a black box, I take it apart. From Android manifests and deterministic rule engines down to router firmware, silicon logic gates, and local LLM quantization — curiosity lives across every layer of the computing stack."**
 
 <br>
 
 <img src="assets/status.svg" alt="Real-time Status HUD: Stack In Use, Active Focus, Research Lab, and Operational Mode" width="100%">
 
+=======
+**Hi, I'm Sparsh.** I'm a BTech Computer Science student who can't leave a black box closed: if something works, I want to know *why*, and then I want to try building my own version. Right now that curiosity is split between security tooling, local AI, networking, and electronics.
+I am very much interested in opensource contributions, backend, IOT, networking and Cybersecurity.
+>>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 <br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
+<<<<<<< HEAD
 <a id="01--about"></a>
+=======
+>>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 ## `01` · about me
 
 I am a **B.Tech Computer Science student** driven by a singular habit: **I can't leave a black box closed.** I'm not a one-language, one-framework developer, and I have no desire to be. The moment a system ceases to be magic is the moment it becomes fascinating:
@@ -50,6 +62,7 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 
 <br>
 
+<<<<<<< HEAD
 <img src="assets/divider.svg" alt="" width="100%">
 
 <a id="02--technology-universe"></a>
@@ -62,6 +75,12 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 </div>
 
 <br>
+=======
+- **Running models locally.** What actually limits a model on consumer hardware: memory, bandwidth, quantisation, and where the trade-offs sit.
+- **OpenWrt and wireless.** Router firmware, Wi-Fi behaviour and squeezing real performance out of cheap hardware.
+- **Electronics from the ground up.** Arduino, digital logic and how a computer is really put together.
+- **Collaborative & Opensource software.** Building with a team, which is a different skill from building alone.
+>>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 
 <img src="assets/divider.svg" alt="" width="100%">
 
@@ -148,8 +167,12 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 
 <img src="assets/divider.svg" alt="" width="100%">
 
+<<<<<<< HEAD
 <a id="04--technical-arsenal"></a>
 ## `04` · technical arsenal
+=======
+## `07` · connect with me
+>>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 
 <table>
   <tr>
