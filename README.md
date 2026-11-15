@@ -1,18 +1,18 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Sparsh Jain. Understand it. Take it apart. Build it better." width="100%">
+<img src="assets/hero.svg" alt="Sparsh Jain. Understand it. Learn it. Build it better." width="100%">
 
 </div>
 
 <br>
 
 **Hi, I'm Sparsh.** I'm a BTech Computer Science student who can't leave a black box closed: if something works, I want to know *why*, and then I want to try building my own version. Right now that curiosity is split between security tooling, local AI, networking, and electronics.
-
+I am very much interested in opensource contributions, backend, IOT, networking and Cybersecurity.
 <br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-## `01` · about
+## `01` · about me
 
 I'm not a one-language, one-stack person, and I don't want to be. The thing I enjoy most is the moment a system stops being magic: reading a manifest to see what an app is really asking for, flashing a router to see how far the radio can be pushed, or wiring logic gates until the truth table finally agrees with the breadboard.
 
@@ -95,7 +95,7 @@ My interests cut across layers on purpose. Software, operating systems, networks
 - **Running models locally.** What actually limits a model on consumer hardware: memory, bandwidth, quantisation, and where the trade-offs sit.
 - **OpenWrt and wireless.** Router firmware, Wi-Fi behaviour and squeezing real performance out of cheap hardware.
 - **Electronics from the ground up.** Arduino, digital logic and how a computer is really put together.
-- **Collaborative software.** Building with a team, which is a different skill from building alone.
+- **Collaborative & Opensource software.** Building with a team, which is a different skill from building alone.
 
 <img src="assets/divider.svg" alt="" width="100%">
 
@@ -116,7 +116,7 @@ My interests cut across layers on purpose. Software, operating systems, networks
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-## `07` · connect
+## `07` · connect with me
 
 <p>
   <a href="https://github.com/jainnsparsh"><img alt="GitHub: jainnsparsh" src="https://img.shields.io/badge/GitHub-jainnsparsh-0f1620?style=for-the-badge&logo=github&logoColor=3ee6ff&labelColor=0f1620&color=1f2a37"></a>
