@@ -1,67 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 125" width="800" height="125" role="img" aria-labelledby="st-t st-d">
-  <title id="st-t">Sparsh Jain — Live Mission Telemetry</title>
-  <desc id="st-d">Four real-time status cards: Stack In Use, Active Focus, Research Lab, and Operational Mode.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 140" width="800" height="140" role="img" aria-labelledby="st-t">
+  <title id="st-t">Live Mission Telemetry Panels</title>
   <defs>
-    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="cg1" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#0e1622"/>
       <stop offset="100%" stop-color="#080c12"/>
     </linearGradient>
-
     <style>
-      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
-      .card-bg { fill: url(#card-grad); stroke: #1e2c3e; stroke-width: 1.2; rx: 8px; }
-      .lab { font-size: 10px; fill: #6b7c91; letter-spacing: 1.5px; font-weight: 700; }
-      .v1 { font-size: 13px; fill: #ffffff; font-weight: 700; }
-      .v2 { font-size: 11.5px; fill: #8da2ba; }
-      .live-ping { animation: pulseLive 2.2s ease-in-out infinite; }
-      @keyframes pulseLive { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; filter: drop-shadow(0 0 4px #00f5a0); } }
-      @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+      .m{font-family:ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+      .cb{fill:url(#cg1);stroke:#162232;stroke-width:1.2}
+      .lb{font-size:9px;fill:#526477;letter-spacing:2px;font-weight:800}
+      .v1{font-size:14px;fill:#f1f5f9;font-weight:700}
+      .v2{font-size:11px;fill:#718295}
+      .lp{animation:pLive 2s ease-in-out infinite}
+      .pb{animation:pBar 2.5s ease-out forwards}
+      @keyframes pLive{0%,100%{opacity:.25}50%{opacity:1;filter:drop-shadow(0 0 5px #00f5a0)}}
+      @keyframes pBar{from{width:0}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
     </style>
   </defs>
-
-  <g class="mono">
-    <!-- PANEL 1: STACK IN USE (CYAN) -->
-    <g transform="translate(0, 0)">
-      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
-      <!-- Top Accent Line -->
-      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#3ee6ff"/>
-      <rect x="16" y="24" width="6" height="6" rx="1" fill="#3ee6ff"/>
-      <text class="lab" x="28" y="31">STACK IN USE</text>
-      <text class="v1" x="16" y="65">Python · TypeScript</text>
-      <text class="v2" x="16" y="90">FastAPI · React · SQLite</text>
+  <g class="m">
+    <!-- PANEL 1: CORE STACK -->
+    <g transform="translate(0,0)">
+      <rect class="cb" x=".75" y=".75" width="190" height="138" rx="8"/>
+      <rect x=".75" y=".75" width="190" height="3.5" rx="1.5" fill="#3ee6ff"/>
+      <circle cx="14" cy="20" r="4" fill="#3ee6ff" fill-opacity=".15"/>
+      <text x="14" y="23" font-size="8" fill="#3ee6ff">⬡</text>
+      <text class="lb" x="28" y="22">CORE STACK</text>
+      <text class="v1" x="14" y="55">Python · TypeScript</text>
+      <text class="v2" x="14" y="75">FastAPI · React · SQLite</text>
+      <!-- Mini progress bar -->
+      <rect x="14" y="92" width="164" height="4" rx="2" fill="#0a0f16"/>
+      <rect class="pb" x="14" y="92" width="164" height="4" rx="2" fill="#3ee6ff" fill-opacity=".7"/>
+      <text x="14" y="116" font-size="9" fill="#526477">PROFICIENCY <tspan fill="#3ee6ff" font-weight="700">████████░░</tspan></text>
     </g>
-
-    <!-- PANEL 2: ACTIVE FOCUS (EMERALD) -->
-    <g transform="translate(203, 0)">
-      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
-      <!-- Top Accent Line -->
-      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#00f5a0"/>
-      <rect x="16" y="24" width="6" height="6" rx="1" fill="#00f5a0"/>
-      <text class="lab" x="28" y="31">ACTIVE FOCUS</text>
-      <text class="v1" x="16" y="65">Security Tooling</text>
-      <text class="v2" x="16" y="90">Permission Sentinel v2</text>
+    <!-- PANEL 2: ACTIVE MISSION -->
+    <g transform="translate(203,0)">
+      <rect class="cb" x=".75" y=".75" width="190" height="138" rx="8"/>
+      <rect x=".75" y=".75" width="190" height="3.5" rx="1.5" fill="#00f5a0"/>
+      <circle cx="14" cy="20" r="4" fill="#00f5a0" fill-opacity=".15"/>
+      <text x="14" y="23" font-size="8" fill="#00f5a0">◉</text>
+      <text class="lb" x="28" y="22">ACTIVE MISSION</text>
+      <text class="v1" x="14" y="55">Security Tooling</text>
+      <text class="v2" x="14" y="75">Permission Sentinel v2</text>
+      <rect x="14" y="92" width="164" height="4" rx="2" fill="#0a0f16"/>
+      <rect class="pb" x="14" y="92" width="130" height="4" rx="2" fill="#00f5a0" fill-opacity=".7"/>
+      <text x="14" y="116" font-size="9" fill="#526477">PROGRESS <tspan fill="#00f5a0" font-weight="700">██████░░░░</tspan></text>
     </g>
-
-    <!-- PANEL 3: RESEARCH LAB (PURPLE) -->
-    <g transform="translate(406, 0)">
-      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
-      <!-- Top Accent Line -->
-      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#a855f7"/>
-      <rect x="16" y="24" width="6" height="6" rx="1" fill="#a855f7"/>
-      <text class="lab" x="28" y="31">RESEARCH LAB</text>
-      <text class="v1" x="16" y="65">Local AI · OpenWrt</text>
-      <text class="v2" x="16" y="90">Arduino · TTL Logic</text>
+    <!-- PANEL 3: RESEARCH LAB -->
+    <g transform="translate(406,0)">
+      <rect class="cb" x=".75" y=".75" width="190" height="138" rx="8"/>
+      <rect x=".75" y=".75" width="190" height="3.5" rx="1.5" fill="#a855f7"/>
+      <circle cx="14" cy="20" r="4" fill="#a855f7" fill-opacity=".15"/>
+      <text x="14" y="23" font-size="8" fill="#a855f7">⬢</text>
+      <text class="lb" x="28" y="22">RESEARCH LAB</text>
+      <text class="v1" x="14" y="55">Local AI · OpenWrt</text>
+      <text class="v2" x="14" y="75">Arduino · TTL Logic</text>
+      <rect x="14" y="92" width="164" height="4" rx="2" fill="#0a0f16"/>
+      <rect class="pb" x="14" y="92" width="100" height="4" rx="2" fill="#a855f7" fill-opacity=".7"/>
+      <text x="14" y="116" font-size="9" fill="#526477">EXPLORING <tspan fill="#a855f7" font-weight="700">█████░░░░░</tspan></text>
     </g>
-
-    <!-- PANEL 4: OPERATIONAL MODE (LIVE GREEN) -->
-    <g transform="translate(609, 0)">
-      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
-      <!-- Top Accent Line -->
-      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#00f5a0"/>
-      <circle class="live-ping" cx="172" cy="27" r="4" fill="#00f5a0"/>
-      <text class="lab" x="16" y="31">OPERATIONAL MODE</text>
-      <text class="v1" x="16" y="65">B.Tech CSE Student</text>
-      <text class="v2" x="16" y="90">Curious by Default</text>
+    <!-- PANEL 4: STATUS -->
+    <g transform="translate(609,0)">
+      <rect class="cb" x=".75" y=".75" width="190" height="138" rx="8"/>
+      <rect x=".75" y=".75" width="190" height="3.5" rx="1.5" fill="#00f5a0"/>
+      <circle class="lp" cx="172" cy="18" r="4.5" fill="#00f5a0"/>
+      <text class="lb" x="14" y="22">OPERATIONAL</text>
+      <text class="v1" x="14" y="55">B.Tech CSE</text>
+      <text class="v2" x="14" y="75">Curious by Default</text>
+      <rect x="14" y="92" width="164" height="4" rx="2" fill="#0a0f16"/>
+      <rect class="pb" x="14" y="92" width="164" height="4" rx="2" fill="#00f5a0" fill-opacity=".7"/>
+      <text x="14" y="116" font-size="9" fill="#526477">CURIOSITY <tspan fill="#00f5a0" font-weight="700">██████████</tspan> ∞</text>
     </g>
   </g>
 </svg>

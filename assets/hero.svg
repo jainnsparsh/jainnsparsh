@@ -1,251 +1,229 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 330" width="800" height="330" role="img" aria-labelledby="hero-title hero-desc">
-  <title id="hero-title">Sparsh Jain — Systems &amp; Security Engineering Laboratory</title>
-  <desc id="hero-desc">Interactive dark-mode terminal window with whoami, SPARSH JAIN, animated silicon chip and cyber telemetry.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340" role="img" aria-labelledby="hero-t hero-d">
+  <title id="hero-t">Sparsh Jain — Engineering Laboratory</title>
+  <desc id="hero-d">Cyberpunk terminal with matrix rain, glitch effects, animated chip, and typing animation.</desc>
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#070a0f"/>
-      <stop offset="50%" stop-color="#0b1017"/>
-      <stop offset="100%" stop-color="#06080c"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050810"/>
+      <stop offset="50%" stop-color="#0a0f18"/>
+      <stop offset="100%" stop-color="#040608"/>
     </linearGradient>
-
-    <!-- Name Gradient -->
-    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="nm" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="35%" stop-color="#e2f7fd"/>
-      <stop offset="70%" stop-color="#3ee6ff"/>
+      <stop offset="30%" stop-color="#c5f0ff"/>
+      <stop offset="60%" stop-color="#3ee6ff"/>
       <stop offset="100%" stop-color="#00f5a0"/>
     </linearGradient>
-
-    <!-- Accent Line Gradient -->
-    <linearGradient id="accent-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#3ee6ff" stop-opacity="0.9"/>
-      <stop offset="50%" stop-color="#00f5a0" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#3ee6ff" stop-opacity="0"/>
+    <linearGradient id="ac" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3ee6ff" stop-opacity=".9"/>
+      <stop offset="50%" stop-color="#00f5a0" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
     </linearGradient>
-
-    <linearGradient id="chip-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="cg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#111823"/>
       <stop offset="100%" stop-color="#0a0f16"/>
     </linearGradient>
-
-    <!-- Dot Matrix Pattern -->
-    <pattern id="grid-dots" width="20" height="20" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="#1b2533" fill-opacity="0.6"/>
+    <pattern id="gd" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r=".8" fill="#1a2533" fill-opacity=".5"/>
     </pattern>
-
-    <!-- Glow Filter -->
-    <filter id="neon-glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    <filter id="gl" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-
-    <clipPath id="terminal-card">
-      <rect width="800" height="330" rx="14"/>
-    </clipPath>
-    <clipPath id="typing-mask">
-      <rect class="typeclip" x="40" y="166" width="600" height="36"/>
-    </clipPath>
+    <clipPath id="cc"><rect width="800" height="340" rx="14"/></clipPath>
+    <clipPath id="tm"><rect class="tc" x="40" y="168" width="480" height="34"/></clipPath>
 
     <style>
-      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
-      .text-muted { fill: #6b7c91; }
-      .text-soft { fill: #cbd5e1; }
-      .text-cyan { fill: #3ee6ff; }
-      .text-green { fill: #00f5a0; }
-      .text-amber { fill: #f59e0b; }
-      .text-violet { fill: #a855f7; }
+      .m{font-family:ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+      /* Matrix rain columns — staggered falling characters */
+      .mr{fill:#3ee6ff;font-size:11px;opacity:0}
+      .mr1{animation:rain 4s linear .2s infinite}.mr2{animation:rain 3.5s linear .8s infinite}
+      .mr3{animation:rain 5s linear .1s infinite}.mr4{animation:rain 3.8s linear 1.2s infinite}
+      .mr5{animation:rain 4.5s linear .5s infinite}.mr6{animation:rain 3.2s linear .9s infinite}
+      .mr7{animation:rain 4.2s linear .3s infinite}.mr8{animation:rain 3.6s linear 1.5s infinite}
+      .mr9{animation:rain 5.5s linear .7s infinite}.mr10{animation:rain 3.9s linear 1s infinite}
+      .mr11{animation:rain 4.8s linear .4s infinite}.mr12{animation:rain 3.4s linear 1.3s infinite}
+      /* Scanline overlay */
+      .sl{animation:scan 8s linear infinite}
+      /* Name glitch */
+      .ng{animation:glitch 4s infinite}
+      /* Typed subtitle */
+      .tc{animation:type 2s steps(46) .7s backwards}
+      /* Blinking cursor */
+      .cu{animation:blink 1.1s steps(2,start) 2.8s infinite backwards}
+      /* Live dot */
+      .lp{animation:pulse 2s ease-in-out infinite}
+      /* Chip core */
+      .cp{animation:cPulse 3s ease-in-out infinite}
+      /* Fade ins */
+      .f1{animation:fadeUp .5s ease-out .1s backwards}
+      .f2{animation:fadeUp .5s ease-out .3s backwards}
+      .f3{animation:fadeUp .5s ease-out 2.2s backwards}
 
-      .anim-fade1 { animation: fadeIn .6s ease-out .1s backwards; }
-      .anim-fade2 { animation: fadeIn .6s ease-out .35s backwards; }
-      .anim-fade3 { animation: fadeIn .6s ease-out 2.2s backwards; }
-      .typeclip { animation: typeText 1.8s steps(48) .6s backwards; }
-      .term-cursor { animation: blinkCursor 1.05s steps(2, start) 2.5s infinite backwards; }
-      .live-ping { animation: pulseGlow 2.4s ease-in-out infinite; }
-      .chip-pulse { animation: chipCore 3s ease-in-out infinite; }
-
-      @keyframes fadeIn { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: translateY(0); } }
-      @keyframes typeText { from { width: 0; } }
-      @keyframes blinkCursor { 0% { opacity: 1; } 50% { opacity: 0; } }
-      @keyframes pulseGlow { 0% { opacity: 0.3; } 50% { opacity: 1; filter: drop-shadow(0 0 5px #00f5a0); } 100% { opacity: 0.3; } }
-      @keyframes chipCore { 0% { opacity: 0.7; } 50% { opacity: 1; filter: drop-shadow(0 0 8px #3ee6ff); } 100% { opacity: 0.7; } }
-
-      @media (prefers-reduced-motion: reduce) {
-        * { animation: none !important; }
-      }
+      @keyframes rain{0%{opacity:0;transform:translateY(-30px)}10%{opacity:.6}90%{opacity:.3}100%{opacity:0;transform:translateY(340px)}}
+      @keyframes scan{0%{transform:translateY(-340px)}100%{transform:translateY(340px)}}
+      @keyframes glitch{0%,92%,100%{transform:translate(0)}93%{transform:translate(-3px,1px)}95%{transform:translate(2px,-1px)}97%{transform:translate(-1px,2px)}}
+      @keyframes type{from{width:0}}
+      @keyframes blink{0%{opacity:1}50%{opacity:0}}
+      @keyframes pulse{0%,100%{opacity:.3;filter:none}50%{opacity:1;filter:drop-shadow(0 0 6px #00f5a0)}}
+      @keyframes cPulse{0%,100%{opacity:.7;filter:none}50%{opacity:1;filter:drop-shadow(0 0 10px #3ee6ff)}}
+      @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}}
+      @media(prefers-reduced-motion:reduce){*{animation:none!important}}
     </style>
   </defs>
 
-  <!-- Container -->
-  <g clip-path="url(#terminal-card)">
-    <rect width="800" height="330" fill="url(#bg-grad)"/>
-    <rect width="800" height="330" fill="url(#grid-dots)"/>
+  <g clip-path="url(#cc)">
+    <rect width="800" height="340" fill="url(#bg)"/>
+    <rect width="800" height="340" fill="url(#gd)"/>
 
-    <!-- Ambient Glow in Top Right -->
-    <circle cx="700" cy="120" r="160" fill="#3ee6ff" fill-opacity="0.04" filter="blur(40px)"/>
-    <circle cx="150" cy="200" r="180" fill="#00f5a0" fill-opacity="0.02" filter="blur(50px)"/>
-
-    <!-- Terminal Window Bar -->
-    <rect width="800" height="42" fill="#0c121a"/>
-    <line x1="0" y1="42" x2="800" y2="42" stroke="#1f2c3f" stroke-width="1"/>
-    <line x1="0" y1="43" x2="360" y2="43" stroke="url(#accent-cyan)" stroke-width="1.5"/>
-
-    <!-- macOS Window Buttons -->
-    <circle cx="24" cy="21" r="5" fill="#ff5f56" fill-opacity="0.85"/>
-    <circle cx="44" cy="21" r="5" fill="#ffbd2e" fill-opacity="0.85"/>
-    <circle cx="64" cy="21" r="5" fill="#27c93f" fill-opacity="0.85"/>
-
-    <!-- Window Title -->
-    <g class="mono" font-size="12">
-      <text class="text-muted" x="400" y="26" text-anchor="middle">sparsh@quantum-node: ~/workspace/laboratory</text>
+    <!-- MATRIX RAIN (right side, behind chip) -->
+    <g class="m" opacity=".35">
+      <text x="540" y="0" class="mr mr1">01001</text>
+      <text x="570" y="0" class="mr mr2">10110</text>
+      <text x="600" y="0" class="mr mr3">11001</text>
+      <text x="630" y="0" class="mr mr4">00111</text>
+      <text x="660" y="0" class="mr mr5">10010</text>
+      <text x="690" y="0" class="mr mr6">01110</text>
+      <text x="720" y="0" class="mr mr7">11010</text>
+      <text x="750" y="0" class="mr mr8">00101</text>
+      <text x="555" y="0" class="mr mr9">1010</text>
+      <text x="615" y="0" class="mr mr10">0110</text>
+      <text x="675" y="0" class="mr mr11">1101</text>
+      <text x="735" y="0" class="mr mr12">0011</text>
     </g>
 
-    <!-- System Status Badge -->
-    <g class="mono" font-size="11">
-      <rect x="670" y="11" width="105" height="20" rx="10" fill="#080e15" stroke="#1f2c3f" stroke-width="1"/>
-      <circle class="live-ping" cx="684" cy="21" r="3.5" fill="#00f5a0"/>
-      <text x="696" y="25" fill="#00f5a0" font-weight="600" letter-spacing="0.5">NOMINAL</text>
+    <!-- SCANLINE OVERLAY -->
+    <rect class="sl" x="0" y="0" width="800" height="4" fill="#3ee6ff" fill-opacity=".04" rx="2"/>
+
+    <!-- Ambient glows -->
+    <circle cx="680" cy="140" r="140" fill="#3ee6ff" fill-opacity=".04"/>
+    <circle cx="120" cy="240" r="160" fill="#00f5a0" fill-opacity=".025"/>
+
+    <!-- Terminal chrome bar -->
+    <rect width="800" height="42" fill="#0a1018"/>
+    <line x1="0" y1="42" x2="800" y2="42" stroke="#182436" stroke-width="1"/>
+    <line x1="0" y1="43" x2="300" y2="43" stroke="url(#ac)" stroke-width="2"/>
+    <circle cx="22" cy="21" r="5" fill="#ff5f56" fill-opacity=".85"/>
+    <circle cx="40" cy="21" r="5" fill="#ffbd2e" fill-opacity=".85"/>
+    <circle cx="58" cy="21" r="5" fill="#27c93f" fill-opacity=".85"/>
+    <text class="m" x="400" y="26" font-size="12" fill="#526477" text-anchor="middle">sparsh@quantum-core: ~/zero-black-boxes</text>
+    <!-- Live status pill -->
+    <g class="m" font-size="11">
+      <rect x="680" y="10" width="100" height="22" rx="11" fill="#060a10" stroke="#182436" stroke-width="1"/>
+      <circle class="lp" cx="694" cy="21" r="3.5" fill="#00f5a0"/>
+      <text x="704" y="26" fill="#00f5a0" font-weight="600" letter-spacing=".5">ONLINE</text>
     </g>
 
-    <!-- Terminal Prompt Line 1 -->
-    <g class="mono anim-fade1" font-size="14">
-      <text x="40" y="84">
-        <tspan class="text-cyan" font-weight="700">sparsh@lab</tspan><tspan class="text-muted">:</tspan><tspan class="text-green">~</tspan><tspan class="text-muted">$</tspan>
-        <tspan fill="#e2e8f0" dx="8">whoami --verbose --stack=all-layers</tspan>
+    <!-- Prompt line -->
+    <g class="m f1" font-size="14">
+      <text x="40" y="82">
+        <tspan fill="#3ee6ff" font-weight="700">❯</tspan>
+        <tspan fill="#00f5a0" dx="6">sparsh@lab</tspan><tspan fill="#526477">:</tspan><tspan fill="#a855f7">~</tspan><tspan fill="#526477">$</tspan>
+        <tspan fill="#cbd5e1" dx="8">whoami --verbose --depth=silicon</tspan>
       </text>
     </g>
 
-    <!-- Main Name Title -->
-    <g class="mono anim-fade2">
-      <text x="40" y="148" font-size="52" font-weight="800" fill="url(#name-grad)" letter-spacing="1.5">SPARSH JAIN</text>
+    <!-- GLITCHING NAME -->
+    <g class="m f2 ng">
+      <text x="40" y="154" font-size="56" font-weight="900" fill="url(#nm)" letter-spacing="2" filter="url(#gl)">SPARSH JAIN</text>
+    </g>
+    <!-- Glitch echo layers (subtle offset copies) -->
+    <text class="m" x="42" y="154" font-size="56" font-weight="900" fill="#3ee6ff" letter-spacing="2" opacity=".06">SPARSH JAIN</text>
+    <text class="m" x="38" y="155" font-size="56" font-weight="900" fill="#ff5f56" letter-spacing="2" opacity=".04">SPARSH JAIN</text>
+
+    <!-- Typed tagline -->
+    <g clip-path="url(#tm)">
+      <text class="m" x="40" y="192" font-size="19" fill="#94a3b8" font-weight="500">Understand it. Take it apart. Build it better.</text>
     </g>
 
-    <!-- Typing Subtitle -->
-    <g clip-path="url(#typing-mask)">
-      <text class="mono text-soft" x="40" y="190" font-size="20" font-weight="500">
-        Understand it. Take it apart. Build it better.
-      </text>
+    <!-- Tag chips row -->
+    <g class="m f3" font-size="10" font-weight="600">
+      <rect x="40" y="216" width="98" height="22" rx="5" fill="#0d1520" stroke="#1e2d42" stroke-width="1"/>
+      <text x="50" y="231" fill="#3ee6ff">⦿ B.TECH CSE</text>
+      <rect x="146" y="216" width="126" height="22" rx="5" fill="#0d1520" stroke="#1e2d42" stroke-width="1"/>
+      <text x="156" y="231" fill="#00f5a0">⦿ SECURITY ENG</text>
+      <rect x="280" y="216" width="88" height="22" rx="5" fill="#0d1520" stroke="#1e2d42" stroke-width="1"/>
+      <text x="290" y="231" fill="#a855f7">⦿ LOCAL AI</text>
+      <rect x="376" y="216" width="90" height="22" rx="5" fill="#0d1520" stroke="#1e2d42" stroke-width="1"/>
+      <text x="386" y="231" fill="#f59e0b">⦿ SILICON</text>
     </g>
 
-    <!-- Tag Chips / Badges Row -->
-    <g class="mono anim-fade3" font-size="11">
-      <!-- Chip 1 -->
-      <rect x="40" y="214" width="95" height="22" rx="4" fill="#0f1722" stroke="#253549" stroke-width="1"/>
-      <text class="text-cyan" x="48" y="229" font-weight="600">B.TECH CSE</text>
-
-      <!-- Chip 2 -->
-      <rect x="143" y="214" width="130" height="22" rx="4" fill="#0f1722" stroke="#253549" stroke-width="1"/>
-      <text class="text-green" x="151" y="229" font-weight="600">SECURITY TOOLING</text>
-
-      <!-- Chip 3 -->
-      <rect x="281" y="214" width="85" height="22" rx="4" fill="#0f1722" stroke="#253549" stroke-width="1"/>
-      <text class="text-violet" x="289" y="229" font-weight="600">LOCAL AI</text>
-
-      <!-- Chip 4 -->
-      <rect x="374" y="214" width="135" height="22" rx="4" fill="#0f1722" stroke="#253549" stroke-width="1"/>
-      <text class="text-soft" x="382" y="229" font-weight="600">SYSTEMS &amp; SILICON</text>
-    </g>
-
-    <!-- Terminal Prompt Line 2 -->
-    <g class="mono" font-size="14">
+    <!-- Second prompt + cursor -->
+    <g class="m" font-size="14">
       <text x="40" y="276">
-        <tspan class="text-cyan" font-weight="700">~/lab</tspan><tspan class="text-muted">$</tspan>
+        <tspan fill="#3ee6ff" font-weight="700">❯</tspan>
+        <tspan fill="#00f5a0" dx="6">~/lab</tspan><tspan fill="#526477">$</tspan>
         <tspan fill="#e2e8f0" dx="8">./keep-tinkering.sh</tspan>
       </text>
-      <!-- Blinking Cursor -->
-      <rect class="term-cursor" x="252" y="262" width="9" height="17" fill="#3ee6ff"/>
+      <rect class="cu" x="244" y="262" width="10" height="18" rx="1" fill="#3ee6ff"/>
     </g>
 
-    <!-- Microchip / Circuit Schematic (Right Column) -->
-    <g transform="translate(620, 68)">
-      <!-- Traces Background -->
+    <!-- SILICON CHIP (right column) -->
+    <g transform="translate(608,62)">
       <g stroke="#3ee6ff" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <!-- Input Traces Left -->
-        <path d="M-60 25 H-20" stroke-opacity="0.35"/>
-        <path d="M-90 55 H-20" stroke-opacity="0.45"/>
-        <path d="M-60 85 H-20" stroke-opacity="0.35"/>
-        <path d="M-80 115 H-20" stroke-opacity="0.4"/>
-        <path d="M-90 55 L-110 35 H-140" stroke-opacity="0.3"/>
-        <path d="M-80 115 L-100 135 H-130" stroke-opacity="0.25"/>
-
-        <!-- Output Traces Right -->
-        <path d="M120 25 H150" stroke-opacity="0.35"/>
-        <path d="M120 55 H165" stroke-opacity="0.45"/>
-        <path d="M120 85 H150" stroke-opacity="0.35"/>
-        <path d="M120 115 H160" stroke-opacity="0.3"/>
-        <path d="M165 55 L180 40 V15" stroke-opacity="0.25"/>
-        <path d="M160 115 L175 130 V150" stroke-opacity="0.25"/>
-
-        <!-- Top / Bottom Pins -->
-        <path d="M25 -15 V0" stroke-opacity="0.5"/>
-        <path d="M50 -15 V0" stroke-opacity="0.5"/>
-        <path d="M75 -15 V0" stroke-opacity="0.5"/>
-        <path d="M25 140 V155" stroke-opacity="0.5"/>
-        <path d="M50 140 V155" stroke-opacity="0.5"/>
-        <path d="M75 140 V155" stroke-opacity="0.5"/>
+        <!-- input traces -->
+        <path d="M-55 30H-15" stroke-opacity=".4"/>
+        <path d="M-75 60H-15" stroke-opacity=".5"/>
+        <path d="M-55 90H-15" stroke-opacity=".4"/>
+        <path d="M-65 120H-15" stroke-opacity=".35"/>
+        <path d="M-75 60L-95 40H-125" stroke-opacity=".25"/>
+        <path d="M-65 120L-85 140H-115" stroke-opacity=".2"/>
+        <!-- output traces -->
+        <path d="M125 30H155" stroke-opacity=".4"/>
+        <path d="M125 60H170" stroke-opacity=".5"/>
+        <path d="M125 90H155" stroke-opacity=".4"/>
+        <path d="M125 120H165" stroke-opacity=".35"/>
+        <path d="M170 60L185 45V18" stroke-opacity=".25"/>
+        <path d="M165 120L180 135V158" stroke-opacity=".2"/>
+        <!-- top/bottom pins -->
+        <path d="M25-12V5M55-12V5M85-12V5" stroke-opacity=".55"/>
+        <path d="M25 145V162M55 145V162M85 145V162" stroke-opacity=".55"/>
       </g>
-
-      <!-- Pin Nodes -->
+      <!-- pin nodes -->
       <g fill="#3ee6ff">
-        <circle cx="-140" cy="35" r="2.5" fill-opacity="0.6"/>
-        <circle cx="-130" cy="135" r="2.5" fill-opacity="0.6"/>
-        <circle cx="180" cy="15" r="2.5" fill-opacity="0.6"/>
-        <circle cx="175" cy="150" r="2.5" fill-opacity="0.6"/>
+        <circle cx="-125" cy="40" r="2.5" fill-opacity=".6"/>
+        <circle cx="-115" cy="140" r="2.5" fill-opacity=".6"/>
+        <circle cx="185" cy="18" r="2.5" fill-opacity=".6"/>
+        <circle cx="180" cy="158" r="2.5" fill-opacity=".6"/>
       </g>
-
-      <!-- Chip Package -->
-      <rect x="-10" y="5" width="120" height="130" rx="8" fill="url(#chip-grad)" stroke="#3ee6ff" stroke-width="1.8" stroke-opacity="0.85"/>
-      <rect x="0" y="15" width="100" height="110" rx="4" fill="#080d14" stroke="#1f2c3f" stroke-width="1"/>
-
-      <!-- Silicon Core Die -->
-      <rect class="chip-pulse" x="18" y="33" width="64" height="64" rx="4" fill="#0e1724" stroke="#00f5a0" stroke-width="1.2" stroke-opacity="0.9"/>
-
-      <!-- Center Logo & Micro Labels -->
-      <text class="mono text-cyan" x="50" y="68" font-size="22" font-weight="800" text-anchor="middle" letter-spacing="1">SJ</text>
-      <text class="mono text-muted" x="50" y="84" font-size="8" font-weight="700" text-anchor="middle" letter-spacing="1.5">CORE-X86</text>
-
-      <!-- Corner Alignment Dots on Silicon -->
-      <circle cx="26" cy="41" r="1.5" fill="#3ee6ff" fill-opacity="0.7"/>
-      <circle cx="74" cy="41" r="1.5" fill="#3ee6ff" fill-opacity="0.7"/>
-      <circle cx="26" cy="89" r="1.5" fill="#3ee6ff" fill-opacity="0.7"/>
-      <circle cx="74" cy="89" r="1.5" fill="#3ee6ff" fill-opacity="0.7"/>
-
-      <!-- Pin Labels -->
-      <g class="mono" font-size="7" fill="#6b7c91" font-weight="600">
-        <text x="-4" y="28">CLK</text>
-        <text x="-4" y="58">INT</text>
-        <text x="-4" y="88">RX</text>
-        <text x="-4" y="118">TX</text>
-        <text x="104" y="28" text-anchor="end">VCC</text>
-        <text x="104" y="58" text-anchor="end">GND</text>
-        <text x="104" y="88" text-anchor="end">BUS</text>
-        <text x="104" y="118" text-anchor="end">ACK</text>
+      <!-- package -->
+      <rect x="-5" y="10" width="120" height="130" rx="8" fill="url(#cg)" stroke="#3ee6ff" stroke-width="2" stroke-opacity=".85"/>
+      <rect x="5" y="20" width="100" height="110" rx="5" fill="#070c14" stroke="#182436" stroke-width="1"/>
+      <!-- silicon die -->
+      <rect class="cp" x="20" y="38" width="70" height="74" rx="5" fill="#0c1320" stroke="#00f5a0" stroke-width="1.3" stroke-opacity=".85"/>
+      <!-- die details -->
+      <line x1="30" y1="58" x2="80" y2="58" stroke="#182436" stroke-width=".8"/>
+      <line x1="30" y1="72" x2="80" y2="72" stroke="#182436" stroke-width=".8"/>
+      <line x1="30" y1="86" x2="80" y2="86" stroke="#182436" stroke-width=".8"/>
+      <line x1="55" y1="45" x2="55" y2="105" stroke="#182436" stroke-width=".8"/>
+      <!-- center text -->
+      <text class="m" x="55" y="70" font-size="24" font-weight="900" fill="#3ee6ff" text-anchor="middle" letter-spacing="1">SJ</text>
+      <text class="m" x="55" y="86" font-size="7" font-weight="700" fill="#526477" text-anchor="middle" letter-spacing="2">REV-X86</text>
+      <!-- corner markers -->
+      <circle cx="28" cy="46" r="1.5" fill="#3ee6ff" fill-opacity=".7"/>
+      <circle cx="82" cy="46" r="1.5" fill="#3ee6ff" fill-opacity=".7"/>
+      <circle cx="28" cy="104" r="1.5" fill="#3ee6ff" fill-opacity=".7"/>
+      <circle cx="82" cy="104" r="1.5" fill="#3ee6ff" fill-opacity=".7"/>
+      <!-- pin labels -->
+      <g class="m" font-size="7" fill="#526477" font-weight="700">
+        <text x="1" y="33">CLK</text><text x="1" y="63">INT</text>
+        <text x="1" y="93">RX</text><text x="1" y="123">TX</text>
+        <text x="109" y="33" text-anchor="end">VCC</text><text x="109" y="63" text-anchor="end">GND</text>
+        <text x="109" y="93" text-anchor="end">BUS</text><text x="109" y="123" text-anchor="end">ACK</text>
       </g>
     </g>
 
-    <!-- Animated Travelling Electron Pulses -->
-    <path id="electron-path-1" d="M480 123 H595 L610 123" stroke="#3ee6ff" stroke-opacity="0.3" stroke-width="1" fill="none"/>
-    <circle r="2.5" fill="#00f5a0">
-      <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s">
-        <mpath href="#electron-path-1"/>
-      </animateMotion>
-    </circle>
+    <!-- Animated electron pulses -->
+    <path id="e1" d="M460 122H590L608 122" stroke="#3ee6ff" stroke-opacity=".25" stroke-width="1" fill="none"/>
+    <circle r="2.5" fill="#00f5a0"><animateMotion dur="3s" repeatCount="indefinite" begin=".5s"><mpath href="#e1"/></animateMotion></circle>
+    <path id="e2" d="M480 310H660L680 290H795" stroke="#3ee6ff" stroke-opacity=".2" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+    <circle r="3" fill="#3ee6ff"><animateMotion dur="4s" repeatCount="indefinite" begin="1.5s"><mpath href="#e2"/></animateMotion></circle>
+    <path id="e3" d="M5 310H80L100 290H200" stroke="#00f5a0" stroke-opacity=".15" stroke-width="1" fill="none" stroke-linejoin="round"/>
+    <circle r="2" fill="#a855f7"><animateMotion dur="3.5s" repeatCount="indefinite" begin=".8s"><mpath href="#e3"/></animateMotion></circle>
 
-    <path id="electron-path-2" d="M530 306 H680 L700 286 H792" stroke="#3ee6ff" stroke-opacity="0.25" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
-    <circle r="3" fill="#3ee6ff">
-      <animateMotion dur="4.5s" repeatCount="indefinite" begin="1.5s">
-        <mpath href="#electron-path-2"/>
-      </animateMotion>
-    </circle>
-
-    <!-- Bottom Status Telemetry Line -->
-    <g class="mono" font-size="10" fill="#526477">
-      <text x="40" y="314">
-        <tspan fill="#3ee6ff">SYSTEM:</tspan> READY  ·  <tspan fill="#3ee6ff">ENV:</tspan> HYPERVISOR  ·  <tspan fill="#00f5a0">PHILOSOPHY:</tspan> ZERO BLACK BOXES  ·  <tspan fill="#a855f7">UPTIME:</tspan> 99.99%
-      </text>
+    <!-- Bottom telemetry -->
+    <g class="m" font-size="9" fill="#3b4a5f">
+      <text x="40" y="322"><tspan fill="#3ee6ff">SYS</tspan>:OK · <tspan fill="#00f5a0">PHIL</tspan>:ZERO_BLACK_BOXES · <tspan fill="#a855f7">MODE</tspan>:DEEP_DIVE · <tspan fill="#f59e0b">ARCH</tspan>:FULL_STACK_TO_SILICON</text>
     </g>
   </g>
-
-  <!-- Outer Glass Border -->
-  <rect x="0.75" y="0.75" width="798.5" height="328.5" rx="13.5" fill="none" stroke="#1f2c3f" stroke-width="1.5"/>
+  <rect x=".75" y=".75" width="798.5" height="338.5" rx="13.5" fill="none" stroke="#182436" stroke-width="1.5"/>
 </svg>
