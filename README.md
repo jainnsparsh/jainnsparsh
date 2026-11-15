@@ -1,6 +1,5 @@
 <div align="center">
 
-<<<<<<< HEAD
 <!-- Hero Banner -->
 <img src="assets/hero.svg" alt="Sparsh Jain — Systems &amp; Security Engineering Laboratory Banner" width="100%">
 
@@ -16,56 +15,47 @@
 
 <!-- Quick Navigation Bar -->
 <p align="center">
-  <code><a href="#01--about">01 // ABOUT</a></code> &nbsp;·&nbsp;
-  <code><a href="#02--technology-universe">02 // UNIVERSE</a></code> &nbsp;·&nbsp;
+  <code><a href="#01--about-me">01 // ABOUT</a></code> &nbsp;·&nbsp;
+  <code><a href="#02--cross-layer-architecture">02 // UNIVERSE</a></code> &nbsp;·&nbsp;
   <code><a href="#03--flagship-projects">03 // PROJECTS</a></code> &nbsp;·&nbsp;
   <code><a href="#04--technical-arsenal">04 // ARSENAL</a></code> &nbsp;·&nbsp;
-  <code><a href="#05--under-the-hood">05 // TELEMETRY</a></code> &nbsp;·&nbsp;
-  <code><a href="#06--github-analytics">06 // METRICS</a></code> &nbsp;·&nbsp;
-  <code><a href="#07--direct-transmission">07 // CONNECT</a></code>
+  <code><a href="#05--laboratory-telemetry">05 // TELEMETRY</a></code> &nbsp;·&nbsp;
+  <code><a href="#06--engineering-analytics">06 // METRICS</a></code> &nbsp;·&nbsp;
+  <code><a href="#07--connect-with-me">07 // CONNECT</a></code>
 </p>
-=======
-<img src="assets/hero.svg" alt="Sparsh Jain. Understand it. Learn it. Build it better." width="100%">
->>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 
 </div>
 
 <br>
 
-<<<<<<< HEAD
 > **"If a system works, I want to know why. If it's a black box, I take it apart. From Android manifests and deterministic rule engines down to router firmware, silicon logic gates, and local LLM quantization — curiosity lives across every layer of the computing stack."**
 
 <br>
 
 <img src="assets/status.svg" alt="Real-time Status HUD: Stack In Use, Active Focus, Research Lab, and Operational Mode" width="100%">
 
-=======
-**Hi, I'm Sparsh.** I'm a BTech Computer Science student who can't leave a black box closed: if something works, I want to know *why*, and then I want to try building my own version. Right now that curiosity is split between security tooling, local AI, networking, and electronics.
-I am very much interested in opensource contributions, backend, IOT, networking and Cybersecurity.
->>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 <br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-<<<<<<< HEAD
-<a id="01--about"></a>
-=======
->>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
+<a id="01--about-me"></a>
 ## `01` · about me
 
-I am a **B.Tech Computer Science student** driven by a singular habit: **I can't leave a black box closed.** I'm not a one-language, one-framework developer, and I have no desire to be. The moment a system ceases to be magic is the moment it becomes fascinating:
-- Reading an Android manifest and decompiled bytecode to expose what an application is *actually* requesting.
-- Flashing embedded routers with custom OpenWrt images to push radio transceivers and packet queues to their limits.
-- Wiring discrete 7400-series TTL logic gates until the truth table finally agrees with the breadboard.
+**Hi, I'm Sparsh.** I am a **B.Tech Computer Science student** driven by a singular habit: **I can't leave a black box closed.** I'm not a one-language, one-framework developer, and I have no desire to be. Right now, that curiosity is split between security tooling, local AI, networking, systems architecture, and electronics.
+
+I am deeply invested in **open-source contributions, backend systems, IoT, wireless networking, and cybersecurity**. The moment a system ceases to be magic is the moment it becomes fascinating:
+- **Decompilation &amp; Auditing:** Reading Android manifests and decompiled bytecode to expose what an application is *actually* requesting.
+- **Embedded Firmware:** Flashing routers with custom OpenWrt images to push radio transceivers and packet queues to their limits.
+- **Hardware Logic:** Wiring discrete 7400-series TTL logic gates until the truth table finally agrees with the breadboard.
+- **Collaborative Engineering:** Building with open-source teams and shipping production software with high code review standards.
 
 My interests deliberately span the entire stack. **Software, operating systems, networking protocols, silicon architectures, and the user interface** all inform one another. Following problems down to bare metal makes me write cleaner, more resilient high-level code.
 
 <br>
 
-<<<<<<< HEAD
 <img src="assets/divider.svg" alt="" width="100%">
 
-<a id="02--technology-universe"></a>
+<a id="02--cross-layer-architecture"></a>
 ## `02` · cross-layer architecture
 
 <img src="assets/universe.svg" alt="Hub-and-spoke technology universe: Software Engineering, AI & Machine Learning, Systems & Linux, Networking, Electronics & Silicon, and Security & UI Design" width="100%">
@@ -75,12 +65,6 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 </div>
 
 <br>
-=======
-- **Running models locally.** What actually limits a model on consumer hardware: memory, bandwidth, quantisation, and where the trade-offs sit.
-- **OpenWrt and wireless.** Router firmware, Wi-Fi behaviour and squeezing real performance out of cheap hardware.
-- **Electronics from the ground up.** Arduino, digital logic and how a computer is really put together.
-- **Collaborative & Opensource software.** Building with a team, which is a different skill from building alone.
->>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 
 <img src="assets/divider.svg" alt="" width="100%">
 
@@ -167,12 +151,8 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-<<<<<<< HEAD
 <a id="04--technical-arsenal"></a>
 ## `04` · technical arsenal
-=======
-## `07` · connect with me
->>>>>>> f951395ab619781009879e65ea0fd0a5ada1e07f
 
 <table>
   <tr>
@@ -240,7 +220,7 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-<a id="05--under-the-hood"></a>
+<a id="05--laboratory-telemetry"></a>
 ## `05` · laboratory telemetry &amp; diagnostics
 
 <!-- Fastfetch Style Diagnostics HUD -->
@@ -253,12 +233,13 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 - 📡 **OpenWrt Firmware Modding:** Tuning wireless radio channel propagation, packet prioritization, and stripped micro-package deployments.
 - 🔌 **Hardware Logic Synthesis:** Constructing synchronous counter registers and arithmetic blocks using raw 7400-series TTL chips on breadboards.
 - 🛡️ **Zero-Trust Permission Profiling:** Expanding Permission Sentinel's heuristic matrix to audit modern Android background execution vectors and deceptive intent declarations.
+- 🤝 **Collaborative &amp; Open-Source Software:** Building with open-source teams, establishing clean git conventions, and architecting test-driven repositories.
 
 <br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-<a id="06--github-analytics"></a>
+<a id="06--engineering-analytics"></a>
 ## `06` · engineering analytics
 
 <p align="center">
@@ -274,8 +255,8 @@ My interests deliberately span the entire stack. **Software, operating systems, 
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-<a id="07--direct-transmission"></a>
-## `07` · direct transmission &amp; neural link
+<a id="07--connect-with-me"></a>
+## `07` · connect with me
 
 <p align="center">
   Whether you are exploring a deep-tier security problem, firmware reverse engineering, or open-source collaboration, my signal is always listening.
