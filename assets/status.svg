@@ -1,42 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 120" width="800" height="120" role="img" aria-labelledby="st-t st-d">
-  <title id="st-t">Status dashboard</title>
-  <desc id="st-d">Four status panels. Stack in use: Python and TypeScript, FastAPI and React. Building: security tooling, permission auditing. Exploring: local AI and OpenWrt, Arduino and logic. Mode: BTech CSE student, curious by default.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 125" width="800" height="125" role="img" aria-labelledby="st-t st-d">
+  <title id="st-t">Sparsh Jain — Live Mission Telemetry</title>
+  <desc id="st-d">Four real-time status cards: Stack In Use, Active Focus, Research Lab, and Operational Mode.</desc>
   <defs>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0e1622"/>
+      <stop offset="100%" stop-color="#080c12"/>
+    </linearGradient>
+
     <style>
-      .m { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
-      .cell { fill: #0f1620; stroke: #1f2a37; stroke-width: 1.5; }
-      .lab { font-size: 10px; fill: #7d8b99; letter-spacing: 1.5px; }
-      .v1 { font-size: 13px; fill: #e6edf3; font-weight: 700; }
-      .v2 { font-size: 12px; fill: #7d8b99; }
-      .live { animation: pulse 2.4s ease-in-out infinite; }
-      @keyframes pulse { 50% { opacity: .35; } }
+      .mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+      .card-bg { fill: url(#card-grad); stroke: #1e2c3e; stroke-width: 1.2; rx: 8px; }
+      .lab { font-size: 10px; fill: #6b7c91; letter-spacing: 1.5px; font-weight: 700; }
+      .v1 { font-size: 13px; fill: #ffffff; font-weight: 700; }
+      .v2 { font-size: 11.5px; fill: #8da2ba; }
+      .live-ping { animation: pulseLive 2.2s ease-in-out infinite; }
+      @keyframes pulseLive { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; filter: drop-shadow(0 0 4px #00f5a0); } }
       @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
     </style>
   </defs>
-  <g class="m">
-    <rect class="cell" x="0.75" y="0.75" width="188.5" height="118.5" rx="10"/>
-    <rect x="0.75" y="20" width="3" height="28" rx="1.5" fill="#3ee6ff"/>
-    <text class="lab" x="18" y="34">STACK IN USE</text>
-    <text class="v1" x="18" y="66">Python · TypeScript</text>
-    <text class="v2" x="18" y="90">FastAPI · React</text>
 
-    <rect class="cell" x="203.75" y="0.75" width="188.5" height="118.5" rx="10"/>
-    <rect x="203.75" y="20" width="3" height="28" rx="1.5" fill="#3ee6ff"/>
-    <text class="lab" x="221" y="34">BUILDING</text>
-    <text class="v1" x="221" y="66">Security tooling</text>
-    <text class="v2" x="221" y="90">Permission auditing</text>
+  <g class="mono">
+    <!-- PANEL 1: STACK IN USE (CYAN) -->
+    <g transform="translate(0, 0)">
+      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
+      <!-- Top Accent Line -->
+      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#3ee6ff"/>
+      <rect x="16" y="24" width="6" height="6" rx="1" fill="#3ee6ff"/>
+      <text class="lab" x="28" y="31">STACK IN USE</text>
+      <text class="v1" x="16" y="65">Python · TypeScript</text>
+      <text class="v2" x="16" y="90">FastAPI · React · SQLite</text>
+    </g>
 
-    <rect class="cell" x="407.75" y="0.75" width="188.5" height="118.5" rx="10"/>
-    <rect x="407.75" y="20" width="3" height="28" rx="1.5" fill="#3ee6ff"/>
-    <text class="lab" x="425" y="34">EXPLORING</text>
-    <text class="v1" x="425" y="66">Local AI · OpenWrt</text>
-    <text class="v2" x="425" y="90">Arduino · logic</text>
+    <!-- PANEL 2: ACTIVE FOCUS (EMERALD) -->
+    <g transform="translate(203, 0)">
+      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
+      <!-- Top Accent Line -->
+      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#00f5a0"/>
+      <rect x="16" y="24" width="6" height="6" rx="1" fill="#00f5a0"/>
+      <text class="lab" x="28" y="31">ACTIVE FOCUS</text>
+      <text class="v1" x="16" y="65">Security Tooling</text>
+      <text class="v2" x="16" y="90">Permission Sentinel v2</text>
+    </g>
 
-    <rect class="cell" x="610.75" y="0.75" width="188.5" height="118.5" rx="10"/>
-    <rect x="610.75" y="20" width="3" height="28" rx="1.5" fill="#9dff7a"/>
-    <circle class="live" cx="785" cy="30" r="3.5" fill="#9dff7a"/>
-    <text class="lab" x="628" y="34">MODE</text>
-    <text class="v1" x="628" y="66">BTech CSE student</text>
-    <text class="v2" x="628" y="90">Curious by default</text>
+    <!-- PANEL 3: RESEARCH LAB (PURPLE) -->
+    <g transform="translate(406, 0)">
+      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
+      <!-- Top Accent Line -->
+      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#a855f7"/>
+      <rect x="16" y="24" width="6" height="6" rx="1" fill="#a855f7"/>
+      <text class="lab" x="28" y="31">RESEARCH LAB</text>
+      <text class="v1" x="16" y="65">Local AI · OpenWrt</text>
+      <text class="v2" x="16" y="90">Arduino · TTL Logic</text>
+    </g>
+
+    <!-- PANEL 4: OPERATIONAL MODE (LIVE GREEN) -->
+    <g transform="translate(609, 0)">
+      <rect class="card-bg" x="0.75" y="0.75" width="190" height="123"/>
+      <!-- Top Accent Line -->
+      <rect x="0.75" y="0.75" width="190" height="3" rx="1.5" fill="#00f5a0"/>
+      <circle class="live-ping" cx="172" cy="27" r="4" fill="#00f5a0"/>
+      <text class="lab" x="16" y="31">OPERATIONAL MODE</text>
+      <text class="v1" x="16" y="65">B.Tech CSE Student</text>
+      <text class="v2" x="16" y="90">Curious by Default</text>
+    </g>
   </g>
 </svg>

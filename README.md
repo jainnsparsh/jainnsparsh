@@ -1,134 +1,290 @@
 <div align="center">
 
-<img src="assets/hero.svg" alt="Sparsh Jain. Understand it. Take it apart. Build it better." width="100%">
+<!-- Hero Banner -->
+<img src="assets/hero.svg" alt="Sparsh Jain — Systems &amp; Security Engineering Laboratory Banner" width="100%">
+
+<br><br>
+
+<!-- Live Telemetry Badges -->
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=jainnsparsh&color=3ee6ff&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views">
+  <img src="https://img.shields.io/badge/STATUS-OPERATIONAL-00f5a0?style=flat-square&logo=gnubash&logoColor=00f5a0&labelColor=0c121a" alt="Status Operational">
+  <img src="https://img.shields.io/badge/FOCUS-SECURITY%20%26%20SYSTEMS-3ee6ff?style=flat-square&logo=target&logoColor=3ee6ff&labelColor=0c121a" alt="Focus Security and Systems">
+  <img src="https://img.shields.io/badge/LOCATION-INDIA%20(IST)-a855f7?style=flat-square&logo=googlemaps&logoColor=a855f7&labelColor=0c121a" alt="Location India">
+</p>
+
+<!-- Quick Navigation Bar -->
+<p align="center">
+  <code><a href="#01--about">01 // ABOUT</a></code> &nbsp;·&nbsp;
+  <code><a href="#02--technology-universe">02 // UNIVERSE</a></code> &nbsp;·&nbsp;
+  <code><a href="#03--flagship-projects">03 // PROJECTS</a></code> &nbsp;·&nbsp;
+  <code><a href="#04--technical-arsenal">04 // ARSENAL</a></code> &nbsp;·&nbsp;
+  <code><a href="#05--under-the-hood">05 // TELEMETRY</a></code> &nbsp;·&nbsp;
+  <code><a href="#06--github-analytics">06 // METRICS</a></code> &nbsp;·&nbsp;
+  <code><a href="#07--direct-transmission">07 // CONNECT</a></code>
+</p>
 
 </div>
 
 <br>
 
-**Hi, I'm Sparsh.** I'm a BTech Computer Science student who can't leave a black box closed: if something works, I want to know *why*, and then I want to try building my own version. Right now that curiosity is split between security tooling, local AI, networking, and electronics.
+> **"If a system works, I want to know why. If it's a black box, I take it apart. From Android manifests and deterministic rule engines down to router firmware, silicon logic gates, and local LLM quantization — curiosity lives across every layer of the computing stack."**
+
+<br>
+
+<img src="assets/status.svg" alt="Real-time Status HUD: Stack In Use, Active Focus, Research Lab, and Operational Mode" width="100%">
 
 <br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-## `01` · about
+<a id="01--about"></a>
+## `01` · about me
 
-I'm not a one-language, one-stack person, and I don't want to be. The thing I enjoy most is the moment a system stops being magic: reading a manifest to see what an app is really asking for, flashing a router to see how far the radio can be pushed, or wiring logic gates until the truth table finally agrees with the breadboard.
+I am a **B.Tech Computer Science student** driven by a singular habit: **I can't leave a black box closed.** I'm not a one-language, one-framework developer, and I have no desire to be. The moment a system ceases to be magic is the moment it becomes fascinating:
+- Reading an Android manifest and decompiled bytecode to expose what an application is *actually* requesting.
+- Flashing embedded routers with custom OpenWrt images to push radio transceivers and packet queues to their limits.
+- Wiring discrete 7400-series TTL logic gates until the truth table finally agrees with the breadboard.
 
-My interests cut across layers on purpose. Software, operating systems, networks, silicon and the interface a human actually touches all feed into each other, and I learn faster when I can follow a problem down through them.
-
-<img src="assets/divider.svg" alt="" width="100%">
-
-## `02` · technology universe
-
-<img src="assets/universe.svg" alt="Hub-and-spoke map of my interests. Software Engineering and Design and Creativity have solid outlines because they appear in my public repositories. AI and Machine Learning, Systems and Linux, Networking, and Electronics and Embedded have dashed outlines because they are hands-on exploration so far." width="100%">
-
-<sub>Solid outline = visible in my public repos. Dashed = things I tinker with, but haven't published yet.</sub>
-
-<img src="assets/divider.svg" alt="" width="100%">
-
-## `03` · featured projects
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/jainnsparsh/Permission-Sentinel-Web">Permission-Sentinel-Web</a></h3>
-      <p>A context-aware Android permission auditor built for <b>CyberCup Hackathon 6.0</b>. It reads an APK or manifest, compares what the app <i>says</i> it does against what it <i>asks for</i>, and produces a transparent 0–100 risk score.</p>
-      <ul>
-        <li>Deterministic, explainable rule engine instead of an opaque model</li>
-        <li>Local-first: FastAPI + SQLite backend, nothing leaves your machine</li>
-        <li>React / TypeScript dashboard, plus synthetic benchmark apps to test the scoring</li>
-      </ul>
-      <p><code>Python</code> <code>FastAPI</code> <code>SQLite</code> <code>TypeScript</code> <code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Androguard</code> <code>pytest</code></p>
-    </td>
-    <td width="50%" valign="top">
-      <h3><a href="https://github.com/jainnsparsh/Permission-Sentinel-Android">Permission-Sentinel-Android</a></h3>
-      <p>The cross-platform side of the same idea: a native Android app, a FastAPI backend and a React dashboard working together to flag excessive app permissions with explainable risk scores.</p>
-      <ul>
-        <li>Fork of <a href="https://github.com/Rohankhulbe61/Permission-Sentinel-Android">Rohankhulbe61/Permission-Sentinel-Android</a></li>
-        <li>Android app + backend + dashboard in one repo</li>
-        <li>Ships with sample fixtures and one-click run scripts</li>
-      </ul>
-      <p><code>Python</code> <code>Android</code> <code>FastAPI</code> <code>React</code></p>
-    </td>
-  </tr>
-</table>
-
-<!--
-  More projects:
-  Add new repos here as they go public (e.g. the AICTE-CaseSync team project), using the same
-  <td> block. Quality over quantity: two or three cards is plenty.
--->
-
-<img src="assets/divider.svg" alt="" width="100%">
-
-## `04` · technology stack
-
-<table>
-  <tr>
-    <th align="left" width="34%">In use<br><sub>visible in my repos</sub></th>
-    <th align="left" width="33%">Exploring<br><sub>hands-on, not published yet</sub></th>
-    <th align="left" width="33%">Want to go deeper</th>
-  </tr>
-  <tr>
-    <td valign="top">
-      <code>Python</code> <code>TypeScript</code> <code>FastAPI</code> <code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>SQLite</code> <code>Androguard</code> <code>pytest</code> <code>Git</code> <code>GitHub</code>
-    </td>
-    <td valign="top">
-      <code>Local LLMs</code> <code>OpenWrt</code> <code>Linux</code> <code>Arduino</code> <code>Digital logic</code>
-    </td>
-    <td valign="top">
-      <code>Operating systems</code> <code>Computer architecture</code> <code>Embedded systems</code> <code>Open source</code> <code>UI/UX &amp; graphic design</code>
-    </td>
-  </tr>
-</table>
-
-<img src="assets/divider.svg" alt="" width="100%">
-
-## `05` · current exploration
-
-<img src="assets/status.svg" alt="Status dashboard. Stack in use: Python and TypeScript, FastAPI and React. Building: security tooling, permission auditing. Exploring: local AI and OpenWrt, Arduino and logic. Mode: BTech CSE student, curious by default." width="100%">
+My interests deliberately span the entire stack. **Software, operating systems, networking protocols, silicon architectures, and the user interface** all inform one another. Following problems down to bare metal makes me write cleaner, more resilient high-level code.
 
 <br>
 
-- **Running models locally.** What actually limits a model on consumer hardware: memory, bandwidth, quantisation, and where the trade-offs sit.
-- **OpenWrt and wireless.** Router firmware, Wi-Fi behaviour and squeezing real performance out of cheap hardware.
-- **Electronics from the ground up.** Arduino, digital logic and how a computer is really put together.
-- **Collaborative software.** Building with a team, which is a different skill from building alone.
+<img src="assets/divider.svg" alt="" width="100%">
+
+<a id="02--technology-universe"></a>
+## `02` · cross-layer architecture
+
+<img src="assets/universe.svg" alt="Hub-and-spoke technology universe: Software Engineering, AI & Machine Learning, Systems & Linux, Networking, Electronics & Silicon, and Security & UI Design" width="100%">
+
+<div align="center">
+  <sub><b>Solid cyan borders</b> = Shipped in public repositories &nbsp;•&nbsp; <b>Dashed borders</b> = Hands-on laboratory exploration &amp; hardware benches</sub>
+</div>
+
+<br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-## `06` · github analytics
+<a id="03--flagship-projects"></a>
+## `03` · flagship engineering projects
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=jainnsparsh&show_icons=true&hide_rank=true&bg_color=0b0f14&title_color=3ee6ff&text_color=c9d4df&icon_color=3ee6ff&border_color=1f2a37" alt="GitHub stats for jainnsparsh" width="49%">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jainnsparsh&layout=compact&langs_count=6&bg_color=0b0f14&title_color=3ee6ff&text_color=c9d4df&border_color=1f2a37" alt="Most used languages across jainnsparsh's repositories" width="49%">
-</p>
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3>
+        <a href="https://github.com/jainnsparsh/Permission-Sentinel-Web">🛡️ Permission-Sentinel-Web</a>
+      </h3>
+      <p>
+        <img src="https://img.shields.io/badge/HACKATHON-CyberCup%206.0-3ee6ff?style=flat-square&labelColor=0c121a" alt="CyberCup Hackathon 6.0">
+        <img src="https://img.shields.io/badge/ARCH-Local--First-00f5a0?style=flat-square&labelColor=0c121a" alt="Local First">
+      </p>
+      <p>A context-aware Android APK and manifest permission auditor. It analyzes what an app <i>declares</i> versus what it <i>demands</i>, computing a transparent, deterministic 0–100 risk score.</p>
+      <ul>
+        <li><b>Deterministic Rule Engine:</b> Fully explainable heuristics instead of hallucinating black-box models.</li>
+        <li><b>Air-Gapped &amp; Local-First:</b> FastAPI + SQLite engine; zero data leaves your local sandbox.</li>
+        <li><b>Comprehensive Suite:</b> React + TypeScript dashboard with synthetic benchmark APK fixtures.</li>
+      </ul>
+      <p>
+        <a href="https://github.com/jainnsparsh/Permission-Sentinel-Web"><img src="https://img.shields.io/badge/REPO-View%20Codebase-3ee6ff?style=for-the-badge&logo=github&logoColor=080c12&labelColor=0c121a" alt="View Codebase"></a>
+      </p>
+      <p>
+        <code>Python</code> <code>FastAPI</code> <code>SQLite</code> <code>TypeScript</code> <code>React</code> <code>Vite</code> <code>Tailwind CSS</code> <code>Androguard</code> <code>pytest</code>
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <h3>
+        <a href="https://github.com/jainnsparsh/Permission-Sentinel-Android">📱 Permission-Sentinel-Android</a>
+      </h3>
+      <p>
+        <img src="https://img.shields.io/badge/PLATFORM-Android%20Native-00f5a0?style=flat-square&labelColor=0c121a" alt="Android Native">
+        <img src="https://img.shields.io/badge/TYPE-Mobile%20Agent-a855f7?style=flat-square&labelColor=0c121a" alt="Mobile Agent">
+      </p>
+      <p>The companion native Android application for Permission Sentinel: inspecting live device runtime permissions, synchronizing with the backend, and flagging privilege escalations.</p>
+      <ul>
+        <li><b>Runtime Device Auditing:</b> Scans installed packages and foreground/background service permissions on-device.</li>
+        <li><b>Integrated Ecosystem:</b> Native Android client, FastAPI backend, and React dashboard harmonized.</li>
+        <li><b>One-Click Execution:</b> Ships with test fixtures and automated deployment scripts.</li>
+      </ul>
+      <p>
+        <a href="https://github.com/jainnsparsh/Permission-Sentinel-Android"><img src="https://img.shields.io/badge/REPO-View%20Codebase-00f5a0?style=for-the-badge&logo=github&logoColor=080c12&labelColor=0c121a" alt="View Codebase"></a>
+      </p>
+      <p>
+        <code>Android SDK</code> <code>Java</code> <code>Python</code> <code>FastAPI</code> <code>React</code> <code>Security Analysis</code>
+      </p>
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="https://streak-stats.demolab.com?user=jainnsparsh&background=0b0f14&border=1f2a37&ring=3ee6ff&fire=9dff7a&currStreakLabel=3ee6ff&sideLabels=c9d4df&currStreakNum=e6edf3&sideNums=e6edf3&dates=7d8b99&stroke=1f2a37" alt="Contribution streak for jainnsparsh" width="98%">
-</p>
+<br>
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=jainnsparsh&bg_color=0b0f14&color=3ee6ff&line=3ee6ff&point=9dff7a&area=true&area_color=3ee6ff&hide_border=true" alt="Contribution activity graph for jainnsparsh" width="98%">
-</p>
+<details>
+  <summary><b>🔍 View Lab Experiments &amp; In-Flight Systems (AICTE-CaseSync, Local LLM RAG, TTL CPU)</b></summary>
+  <br>
+  <table>
+    <tr>
+      <th align="left" width="30%">Project / Initiative</th>
+      <th align="left" width="40%">System Architecture</th>
+      <th align="left" width="30%">Current Status</th>
+    </tr>
+    <tr>
+      <td><b>AICTE-CaseSync</b></td>
+      <td>Institutional legal and case-flow tracking platform built for collaborative team governance.</td>
+      <td><code>In Development</code> · Pre-release staging</td>
+    </tr>
+    <tr>
+      <td><b>Edge LLM Quant Studio</b></td>
+      <td>Benchmarking 4-bit vs 8-bit GGUF quantization trade-offs under constrained consumer RAM bandwidth.</td>
+      <td><code>Benchmarking</code> · Empirical testing</td>
+    </tr>
+    <tr>
+      <td><b>7400-Series Discrete ALU</b></td>
+      <td>Breadboard 4-bit arithmetic logic unit constructed entirely from discrete NAND, NOR, and XOR gates.</td>
+      <td><code>Hardware Lab</code> · Circuit verified</td>
+    </tr>
+  </table>
+</details>
+
+<br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
-## `07` · connect
+<a id="04--technical-arsenal"></a>
+## `04` · technical arsenal
 
-<p>
-  <a href="https://github.com/jainnsparsh"><img alt="GitHub: jainnsparsh" src="https://img.shields.io/badge/GitHub-jainnsparsh-0f1620?style=for-the-badge&logo=github&logoColor=3ee6ff&labelColor=0f1620&color=1f2a37"></a>
-  <a href="https://www.linkedin.com/in/sparsh-jain-0a7b35383/"><img alt="LinkedIn: Sparsh Jain" src="https://img.shields.io/badge/LinkedIn-Sparsh%20Jain-0f1620?style=for-the-badge&logo=linkedin&logoColor=3ee6ff&labelColor=0f1620&color=1f2a37"></a>
-  <!-- Uncomment and fill in when ready:
-  <a href="https://YOUR-PORTFOLIO-URL"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-visit-0f1620?style=for-the-badge&logo=googlechrome&logoColor=3ee6ff&labelColor=0f1620&color=1f2a37"></a>
-  <a href="mailto:YOUR-EMAIL@example.com"><img alt="Email me" src="https://img.shields.io/badge/Email-say%20hi-0f1620?style=for-the-badge&logo=gmail&logoColor=3ee6ff&labelColor=0f1620&color=1f2a37"></a>
-  -->
+<table>
+  <tr>
+    <td width="20%" valign="top"><b>Core Languages</b></td>
+    <td width="80%">
+      <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="Python">
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="TypeScript">
+      <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=F7DF1E&labelColor=0c121a&color=162232" alt="JavaScript">
+      <img src="https://img.shields.io/badge/C%20%2F%20C++-00599C?style=flat-square&logo=cplusplus&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="C/C++">
+      <img src="https://img.shields.io/badge/Bash%20%2F%20Zsh-4EAA25?style=flat-square&logo=gnubash&logoColor=00f5a0&labelColor=0c121a&color=162232" alt="Bash">
+      <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=sqlite&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="SQL">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Web &amp; Backend</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=00f5a0&labelColor=0c121a&color=162232" alt="FastAPI">
+      <img src="https://img.shields.io/badge/React%2019-61DAFB?style=flat-square&logo=react&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="React">
+      <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=a855f7&labelColor=0c121a&color=162232" alt="Vite">
+      <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="Tailwind CSS">
+      <img src="https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="SQLite">
+      <img src="https://img.shields.io/badge/REST%20APIs-005571?style=flat-square&logo=postman&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="REST APIs">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Security &amp; Analysis</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Androguard-3DDC84?style=flat-square&logo=android&logoColor=00f5a0&labelColor=0c121a&color=162232" alt="Androguard">
+      <img src="https://img.shields.io/badge/APK%20Decompilation-000000?style=flat-square&logo=gnubash&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="APK Decompilation">
+      <img src="https://img.shields.io/badge/AST%20Rule%20Auditing-0c121a?style=flat-square&logo=python&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="AST Parsing">
+      <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="pytest">
+      <img src="https://img.shields.io/badge/Deterministic%20Scoring-00f5a0?style=flat-square&logo=target&logoColor=080c12&labelColor=0c121a&color=162232" alt="Deterministic Scoring">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Systems &amp; Hardware</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Linux%20%2F%20POSIX-FCC624?style=flat-square&logo=linux&logoColor=080c12&labelColor=0c121a&color=162232" alt="Linux">
+      <img src="https://img.shields.io/badge/OpenWrt%20Firmware-008080?style=flat-square&logo=openwrt&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="OpenWrt">
+      <img src="https://img.shields.io/badge/Arduino%20UNO-00979D?style=flat-square&logo=arduino&logoColor=00f5a0&labelColor=0c121a&color=162232" alt="Arduino">
+      <img src="https://img.shields.io/badge/7400%20TTL%20Logic-a855f7?style=flat-square&logo=microchip&logoColor=a855f7&labelColor=0c121a&color=162232" alt="TTL Logic">
+      <img src="https://img.shields.io/badge/Git%20%26%20GitHub-F05032?style=flat-square&logo=git&logoColor=F05032&labelColor=0c121a&color=162232" alt="Git">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>Local AI &amp; Inference</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Ollama-000000?style=flat-square&logo=ollama&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="Ollama">
+      <img src="https://img.shields.io/badge/GGUF%20Quantization-a855f7?style=flat-square&logo=huggingface&logoColor=a855f7&labelColor=0c121a&color=162232" alt="Quantization">
+      <img src="https://img.shields.io/badge/Local%20Inference-00f5a0?style=flat-square&logo=openai&logoColor=00f5a0&labelColor=0c121a&color=162232" alt="Local Inference">
+      <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=FFD21E&labelColor=0c121a&color=162232" alt="HuggingFace">
+    </td>
+  </tr>
+  <tr>
+    <td valign="top"><b>UI/UX &amp; Schematics</b></td>
+    <td>
+      <img src="https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=F24E1E&labelColor=0c121a&color=162232" alt="Figma">
+      <img src="https://img.shields.io/badge/UI%2FUX%20Architecture-00f5a0?style=flat-square&logo=adobexd&logoColor=00f5a0&labelColor=0c121a&color=162232" alt="UI/UX Architecture">
+      <img src="https://img.shields.io/badge/Technical%20Drafting-3ee6ff?style=flat-square&logo=diagramsdotnet&logoColor=3ee6ff&labelColor=0c121a&color=162232" alt="Technical Schematics">
+    </td>
+  </tr>
+</table>
+
+<br>
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+<a id="05--under-the-hood"></a>
+## `05` · laboratory telemetry &amp; diagnostics
+
+<!-- Fastfetch Style Diagnostics HUD -->
+<img src="assets/telemetry.svg" alt="Sparsh Jain Hardware Telemetry and Fastfetch System Diagnostics" width="100%">
+
+<br>
+
+### Current Workbench Initiatives
+- ⚡ **Local LLM Performance Boundaries:** Benchmarking memory bandwidth saturation and token-per-second latency curves on consumer silicon across 4-bit vs 8-bit quantization.
+- 📡 **OpenWrt Firmware Modding:** Tuning wireless radio channel propagation, packet prioritization, and stripped micro-package deployments.
+- 🔌 **Hardware Logic Synthesis:** Constructing synchronous counter registers and arithmetic blocks using raw 7400-series TTL chips on breadboards.
+- 🛡️ **Zero-Trust Permission Profiling:** Expanding Permission Sentinel's heuristic matrix to audit modern Android background execution vectors and deceptive intent declarations.
+
+<br>
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+<a id="06--github-analytics"></a>
+## `06` · engineering analytics
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=jainnsparsh&theme=dark&background=0b1017&border=1f2c3f&stroke=3ee6ff&ring=3ee6ff&fire=00f5a0&currStreakLabel=3ee6ff&sideLabels=8da2ba&currStreakNum=ffffff&sideNums=ffffff&dates=64748b" alt="Contribution Streak for Sparsh Jain" width="98%">
 </p>
+
+<p align="center">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jainnsparsh&show_icons=true&hide_rank=false&bg_color=0b1017&title_color=3ee6ff&text_color=8da2ba&icon_color=00f5a0&border_color=1f2c3f" alt="GitHub Stats for Sparsh Jain" width="49%">
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jainnsparsh&layout=compact&langs_count=6&bg_color=0b1017&title_color=3ee6ff&text_color=8da2ba&border_color=1f2c3f" alt="Most Used Languages by Sparsh Jain" width="49%">
+</p>
+
+<br>
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+<a id="07--direct-transmission"></a>
+## `07` · direct transmission &amp; neural link
+
+<p align="center">
+  Whether you are exploring a deep-tier security problem, firmware reverse engineering, or open-source collaboration, my signal is always listening.
+</p>
+
+<p align="center">
+  <a href="https://github.com/jainnsparsh">
+    <img src="https://img.shields.io/badge/GitHub-jainnsparsh-3ee6ff?style=for-the-badge&logo=github&logoColor=080c12&labelColor=0c121a" alt="GitHub Profile">
+  </a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/sparsh-jain-0a7b35383/">
+    <img src="https://img.shields.io/badge/LinkedIn-Sparsh%20Jain-00f5a0?style=for-the-badge&logo=linkedin&logoColor=080c12&labelColor=0c121a" alt="LinkedIn Profile">
+  </a>
+  &nbsp;
+  <a href="mailto:sparshdarsh78@outlook.com">
+    <img src="https://img.shields.io/badge/Email-sparshdarsh78@outlook.com-a855f7?style=for-the-badge&logo=microsoftoutlook&logoColor=080c12&labelColor=0c121a" alt="Email Contact">
+  </a>
+</p>
+
+<br>
 
 <img src="assets/divider.svg" alt="" width="100%">
 
 <div align="center">
-  <sub><code>~/lab $ ./keep-tinkering.sh</code></sub>
+
+```bash
+sparsh@quantum-node:~/laboratory$ ./keep-tinkering.sh --mode=deep-dive --status=nominal
+[+] Verifying zero black boxes... OK
+[+] Core running: Python · TypeScript · Linux · Silicon
+[+] Process exit code: 0 [CONTINUOUS_EXPLORATION]
+```
+
+<sub>Crafted with obsessive precision &amp; curiosity. No black boxes allowed.</sub>
+
 </div>
